@@ -1,0 +1,276 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    height: 100vh;
+    background: linear-gradient(90deg, rgb(209, 134, 21) 90%, white 10%);
+    padding-top: 3rem;
+}
+
+form{
+    margin: auto;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box1{
+    display: flex;
+    gap: .4rem;
+}
+
+.h1 h1{
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    color: rgb(107, 68, 9);
+    margin-bottom: .7rem;
+}
+
+.ipn{
+    border-bottom:4px solid rgb(107, 68, 9) ;
+    outline: none;
+    border-radius: 10px;
+    padding: 0 .7rem;
+}
+
+.ipn input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+}
+
+#wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+            .card{
+                background-color: transparent;
+                width: 300px;
+                height: 350px;
+                perspective: 1000px;
+            }
+
+            .card1{
+                position: relative;
+                width: 300px;
+                height: 350px;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+            }
+
+            .card1_img{
+                transform: rotatey(0);
+                transition: all 0.5s ease-in-out 0s;
+            }
+
+            .card:hover .card1{
+                transform: rotatey(180deg);
+            }
+
+            .card1_img, .card1_comment{
+                position: absolute;
+                width: 300px;
+                height: 350px;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+
+            .card1_img{
+                border-radius: 15px;
+                color: black;
+            }
+
+            .card1_comment{
+                background-color: gray;
+                border-radius: 15px;
+                color: rgb(51, 33, 6);
+                padding-top: 2rem;
+                align-items: center;
+                transform: rotatey(180deg);
+            }
+
+img{
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+}
+
+h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+p{
+    color: rgb(82, 61, 31);
+    margin: 1rem;
+}
+
+@media (min-width: 320px) and (max-width: 450px){
+    form{
+        margin: auto;
+        max-width: 120px;;
+        align-items: center;
+        justify-content: center;
+    }
+    .h1 h1{
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        color: rgb(107, 68, 9);
+
+    }
+    .ipn input{
+        outline: none;
+        border: none;
+        background-color: transparent;
+        font-size: 1.2rem;
+    }
+    #wrapper{
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    .card{
+        background-color: transparent;
+        width:250px;
+        height:320px;
+        perspective: 1000px;
+    }
+
+    .card1{
+        position: relative;
+        width:250px;
+        height:320px;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .card1_img{
+        transform: rotatey(0);
+        transition: all 0.5s ease-in-out 0s;
+    }
+
+    .card:hover .card1{
+        transform: rotatey(180deg);
+    }
+
+    .card1_img, .card1_comment{
+        position: absolute;
+        width:250px;
+        height:320px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .card1_img{
+        border-radius: 15px;
+        color: black;
+    }
+
+    .card1_comment{
+        background-color: gray;
+        border-radius: 15px;
+        color: rgb(51, 33, 6);
+        padding-top: 2rem;
+        align-items: center;
+        transform: rotatey(180deg);
+        font-size: 14px;
+    }
+
+img{
+width:250px;
+height:320px;
+border-radius: 15px;
+}
+
+
+
+}
+@media (min-width: 450px) and (max-width: 680px){
+    form{
+        max-width: 320px;
+        
+    }
+    #wrapper{
+        grid-template-columns: 1fr 1fr;
+       
+    }
+    .card{
+        width: 100%;
+    }
+    .card1_comment{
+        background-color: gray;
+        border-radius: 15px;
+        color: rgb(51, 33, 6);
+        padding-top: 2rem;
+        align-items: center;
+        transform: rotatey(180deg);
+        font-size: 14px;
+    }
+
+
+}
+@media (min-width:680px) and (max-width:800px){
+    form{
+        max-width: 480px;
+        
+    }
+    #wrapper{
+        max-width: 480px;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        width: 100%;
+    }
+    .card1_comment{
+        background-color: gray;
+        border-radius: 15px;
+        color: rgb(51, 33, 6);
+        padding-top: 2rem;
+        align-items: center;
+        transform: rotatey(180deg);
+        font-size: 14px;
+    }
+
+}
+@media (min-width:800px) and (max-width:1000px){
+    form{
+        max-width: 480px;
+        
+    }
+    #wrapper{
+        max-width: 480px;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        width: 100%;
+    }
+    .card1_comment{
+        background-color: gray;
+        border-radius: 15px;
+        color: rgb(51, 33, 6);
+        padding-top: 2rem;
+        align-items: center;
+        transform: rotatey(180deg);
+        font-size: 14px;
+    }
+
+}
